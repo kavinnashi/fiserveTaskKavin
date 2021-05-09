@@ -1,0 +1,15 @@
+<div class="dashboard">
+    <div
+      class="card"
+      *ngFor="let card of lists " >
+      <div class="card-title">
+        <span class="title" [ngClass]="{'technical': card.category =='Site Manager',
+        'human': card.category =='Human Resource' , 
+        'marketing': card.category =='Marketing', 
+        'finance': card.category =='Financial'}">{{card.category}}</span>
+      </div>
+      <div class="description">
+        {{card.label}}
+      </div>
+    </div>
+  </div>

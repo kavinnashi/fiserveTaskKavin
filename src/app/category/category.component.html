@@ -1,0 +1,47 @@
+<div class="desk-list" role="tablist">
+    <ul class="inner">
+      <li
+        (click)="category='All';inputChange(searchControl)"
+        [ngClass]="{'active': category=='All'}"
+      >
+        All
+      </li>
+      <li
+       
+        *ngFor="let item of categoryList"
+        (click)="category=item;inputChange(searchControl)"
+        [ngClass]="{'active': category==item}"
+      >
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+  <div class="tablist" role="tablist">
+    <ul class="inner">
+      <li
+        class="tablist__tab"
+        (click)="category='All';inputChange(searchControl)"
+        [ngClass]="{'active': category=='All'}"
+      >
+        All
+      </li>
+      <li
+        
+        *ngFor="let item of categoryList"
+        (click)="category=item;inputChange(searchControl)"
+        class="tablist__tab"
+        [ngClass]="{'active': category==item}"
+      >
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <input
+      type="text"
+      [(ngModel)]="searchControl" (ngModelChange)=inputChange(searchControl)
+      placeholder="Start typing document name"
+      class="form-control"
+    />
+    <app-list [lists]="items"></app-list>
+    </div>

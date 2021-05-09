@@ -1,0 +1,72 @@
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  
+    .card {
+     
+  
+      background: #fff;
+      padding: 0;
+      width: 100%;
+      // width: 300px;
+      height: 130px;
+      border-radius: 15px;
+      box-shadow: 4px 4px 4px rgb(0 0 0 / 25%);
+  
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      margin: 10px 0;
+      margin-right: 15px;
+      min-width: 300px;
+      @media (min-width: 720px) {
+        width: 300px;
+      }
+      .card-title {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+        .title {
+          font-size: 14px;
+          color: #262b3d;
+          margin-top: 16.6px;
+          border-radius: 10px;
+          background-color: red;
+          
+          
+          width: 135px;
+       
+          display: flex;
+          align-items: center;
+          height: 30px;
+          justify-content: center;
+          padding: 0 5px;
+        }
+        .technical{
+            background: #e7dfeb;
+          }
+          .human{
+            background: #deeae9;
+        }
+        .marketing{
+            background: #eae4de; 
+        }
+        .finance{
+            background: #e5eade;
+        }
+      }
+      .description {
+        height: 54px;
+        width: 274px;
+        font-size: 18px;
+        color: #525252;
+        margin-left: 30px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        font-weight: bold;
+        overflow: hidden;
+      }
+    }
+  }
+
+    
